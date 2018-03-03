@@ -149,11 +149,11 @@ class MovieInfoVC: UIViewController {
         container?.addSubview(keyL)
         
         let value = values?[i] ?? (data?.object(forKey: keys[i]) as! String)
-        let valueHeight = getLabelHeight(text: value, font: keyFont, width: width/2-16)
+        let valueHeight = getLabelHeight(text: value, font: valueFont, width: width/2-16)
         
         let valueL = UILabel(frame: CGRect(x: x+width/2+4, y: y, width: width/2-20, height: valueHeight))
         valueL.text = value
-        valueL.font = keyFont
+        valueL.font = valueFont
         valueL.numberOfLines = 0
         valueL.lineBreakMode = .byWordWrapping
         container?.addSubview(valueL)
