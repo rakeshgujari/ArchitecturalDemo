@@ -66,6 +66,7 @@ extension RecentSearchesVC: UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell")
         if (cell == nil) {
             cell = UITableViewCell(style: .default, reuseIdentifier: "RecentCell")
+            cell?.selectionStyle = .none
         }
         cell?.textLabel?.text = recentArray[indexPath.row]
         return cell!

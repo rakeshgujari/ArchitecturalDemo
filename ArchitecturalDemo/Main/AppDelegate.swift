@@ -24,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let tabBarController = UITabBarController()
         let movieList = storyboard.instantiateViewController(withIdentifier: "MovieListVC")
+        movieList.title = "Demo App"
         movieList.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), tag: 0)
         let recent = storyboard.instantiateViewController(withIdentifier: "RecentSearchesVC")
         recent.tabBarItem = UITabBarItem(title: "Recent Searches", image: #imageLiteral(resourceName: "recent"), tag: 1)
