@@ -16,7 +16,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        setInitialController()
         return true
+    }
+    
+    func setInitialController() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarController = UITabBarController()
+        let movieList = storyboard.instantiateViewController(withIdentifier: "MovieListVC")
+        movieList.tabBarItem = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home"), tag: 0)
+        let recent = storyboard.instantiateViewController(withIdentifier: "RecentSearchesVC")
+        recent.tabBarItem = UITabBarItem(title: "Recent Searches", image: #imageLiteral(resourceName: "recent"), tag: 1)
+        tabBarController.viewControllers = [movieList,recent].map { UINavigationController(rootViewController: $0)}
+        self.window?.rootViewController = tabBarController
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
