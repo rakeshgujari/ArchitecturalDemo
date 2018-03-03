@@ -12,6 +12,7 @@ class ViewModel: NSObject {
 
     private override init() {}
     public static let context = ViewModel()
+    
     ///Holds data for tableview
     var movies : [Movie] = []
     var totalMoviesCount : Int?
