@@ -18,6 +18,7 @@ class MovieListVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         movieTable.delegate = self
         movieTable.dataSource = self
         self.removeFooter()
@@ -60,10 +61,12 @@ class MovieListVC: UIViewController {
     }
     
     func updateRecentSearchList(str: String) {
+        if !recentArray.contains(str) {
         recentArray[2] = recentArray[1]
         recentArray[1] = recentArray[0]
         recentArray[0] = str
         AppDefaults.default.storeStringArray(withKey: Constants.UserDefaults.recentSearches, value: recentArray)
+        }
     }
 
     

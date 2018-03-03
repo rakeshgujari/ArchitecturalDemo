@@ -13,6 +13,7 @@
 		7C3768C7204AA43E00A09457 /* MovieItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3768C6204AA43E00A09457 /* MovieItemCell.swift */; };
 		7C3768C9204AA67B00A09457 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3768C8204AA67B00A09457 /* Movie.swift */; };
 		7C3768CB204AA75300A09457 /* CustomExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3768CA204AA75300A09457 /* CustomExtensions.swift */; };
+		7C3768CD204B085400A09457 /* AppHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C3768CC204B085400A09457 /* AppHelper.swift */; };
 		7C44CF65204A8075003D24F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C44CF64204A8075003D24F5 /* AppDelegate.swift */; };
 		7C44CF6A204A8075003D24F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C44CF68204A8075003D24F5 /* Main.storyboard */; };
 		7C44CF6C204A8075003D24F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C44CF6B204A8075003D24F5 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		7C3768C6204AA43E00A09457 /* MovieItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieItemCell.swift; sourceTree = "<group>"; };
 		7C3768C8204AA67B00A09457 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		7C3768CA204AA75300A09457 /* CustomExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomExtensions.swift; sourceTree = "<group>"; };
+		7C3768CC204B085400A09457 /* AppHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppHelper.swift; sourceTree = "<group>"; };
 		7C44CF61204A8075003D24F5 /* ArchitecturalDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitecturalDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C44CF64204A8075003D24F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C44CF69204A8075003D24F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				7C44CF80204A8211003D24F5 /* Constants.swift */,
 				7C44CF7D204A81FC003D24F5 /* NetworkManager.swift */,
 				7C3768CA204AA75300A09457 /* CustomExtensions.swift */,
+				7C3768CC204B085400A09457 /* AppHelper.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				7C44CF82204A8211003D24F5 /* Constants.swift in Sources */,
 				7C44CF7E204A81FC003D24F5 /* NetworkManager.swift in Sources */,
 				7C44CF81204A8211003D24F5 /* AppDefaults.swift in Sources */,
+				7C3768CD204B085400A09457 /* AppHelper.swift in Sources */,
 				7C44CF65204A8075003D24F5 /* AppDelegate.swift in Sources */,
 				7C44CF86204A8946003D24F5 /* ViewModel.swift in Sources */,
 				7C3768C9204AA67B00A09457 /* Movie.swift in Sources */,

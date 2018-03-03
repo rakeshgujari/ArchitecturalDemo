@@ -22,6 +22,14 @@ class ViewModel: NSObject {
     /// - Parameter completionHandler: throws response back to calling controller
     func getMovies(searchStr: String, completionHandler: @escaping (Bool) -> Void) {
         
+        if !AppHelper.context.isConnectedToNetwork() {
+            let alert = UIAlertController(title: "", message: "Device is offline. Please connect to internet", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            (UIApplication.shared.delegate?.window??.rootViewController)?.present(alert, animated: true, completion: nil)
+            completionHandler(false)
+            return
+        }
+        
         let pathParam = String(format:Constants.URL.getMoviesList,searchStr,pageNumber)
         
         NetworkManager.context.getDataFromServer(Constants.URL.baseURL+pathParam) { (data,status) in
@@ -53,6 +61,14 @@ class ViewModel: NSObject {
     }
     
     func getMovieInfo(imdbId : String,completionHandler: @escaping (Bool) -> Void) {
+        if !AppHelper.context.isConnectedToNetwork() {
+            let alert = UIAlertController(title: "", message: "Device is offline. Please connect to internet", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            (UIApplication.shared.delegate?.window??.rootViewController)?.present(alert, animated: true, completion: nil)
+            completionHandler(false)
+            return
+        }
+        
         let pathParam = String(format:Constants.URL.getMovieInfo,imdbId)
         NetworkManager.context.getDataFromServer(Constants.URL.baseURL+pathParam) { (response, status) in
             if(response != nil && status == "SUCCESS") {

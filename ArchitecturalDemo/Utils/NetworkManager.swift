@@ -7,6 +7,7 @@
 //
 
 import UIKit
+
 ///Interacts with server and gets data
 class NetworkManager {
 
@@ -29,7 +30,7 @@ class NetworkManager {
             print("Error in converting string to url");
             completion(nil,"ERROR");
             return }
-        print(url)
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         let session = URLSession.shared
