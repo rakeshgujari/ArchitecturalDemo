@@ -106,7 +106,7 @@ extension MovieListVC : UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.movieTitle.text = ViewModel.context.movies[indexPath.row].title!
-        cell.movieImage.loadImage(ViewModel.context.movies[indexPath.row].poster!)
+        cell.movieImage.loadImage(ViewModel.context.movies[indexPath.row].poster!, tag: indexPath.row)
         
         if(indexPath.row == ViewModel.context.movies.count-1 && indexPath.row+1 < (ViewModel.context.totalMoviesCount ?? 0)) {
             self.search(str: searchBar!.text!)
