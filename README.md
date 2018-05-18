@@ -1,4 +1,5 @@
 # ArchitecturalDemo
+
 A Demo project on Design Patterns like:
 1. Singleton
 2. Facade
